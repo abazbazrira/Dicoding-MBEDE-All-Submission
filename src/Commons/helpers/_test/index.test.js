@@ -8,8 +8,4 @@ describe('Helper', () => {
     expect(error).toThrow(Error);
     expect(error).toThrow('Couldn\'t find enviroment variabel: RANDOM');
   });
-
-  it('should getEnv correctly', () => {
-    expect(process.env['PORT']).toEqual(getEnv('PORT'));
-  });
 });
