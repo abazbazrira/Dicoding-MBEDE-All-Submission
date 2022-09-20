@@ -7,17 +7,17 @@ const getEnv = (key) => {
 };
 
 const SERVER_CONFIG = {
-  PORT: getEnv('PORT'),
-  HOST: getEnv('HOST'),
+  PORT: process.env.PORT,
+  HOST: process.env.HOST,
 };
 
 const JWT_CONFIG = {
-  ACCESS_TOKEN_KEY: getEnv('ACCESS_TOKEN_KEY'),
-  REFRESH_TOKEN_KEY: getEnv('REFRESH_TOKEN_KEY'),
+  ACCESS_TOKEN_KEY: process.env.ACCESS_TOKEN_KEY,
+  REFRESH_TOKEN_KEY: process.env.REFRESH_TOKEN_KEY,
   AUTH_STRATEGY_NAME: 'forumapi_jwt',
   AUTH_STRATEGY_SCHEME: 'jwt',
   AUTH_STRATEGY_OPTIONS: {
-    keys: getEnv('ACCESS_TOKEN_KEY'),
+    keys: process.env.ACCESS_TOKEN_KEY,
     verify: {
       aud: false,
       iss: false,
